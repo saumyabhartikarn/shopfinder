@@ -1,0 +1,91 @@
+# shopfinder
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop Finder</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f2f2f2;
+      margin: 0;
+      padding-top: 50px;
+    }
+
+    .container {
+      background: white;
+      width: 350px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px gray;
+    }
+
+    img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    input {
+      padding: 10px;
+      width: 90%;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-top: 10px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" alt="Shop Logo">
+
+    <h1>Shop Finder</h1>
+    <p>Find shops near you easily</p>
+
+    <input type="text" id="search" placeholder="Enter shop or area name">
+    <br>
+    <button onclick="findShop()">Search</button>
+
+    <p id="result"></p>
+
+  </div>
+
+  <script>
+    function findShop() {
+      var text = document.getElementById("search").value;
+
+      if(text === "") {
+        document.getElementById("result").innerHTML = "Please enter something!";
+      } else {
+        document.getElementById("result").innerHTML =
+        "Searching for: <b>" + text + "</b> 🔍 (demo result)";
+      }
+    }
+  </script>
+
+</body>
+      </html>
